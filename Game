@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Brookster Empire</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>The Brookster Empire</h1>
+<p>Welcome to The Brookster Empire! You are The Brookster, a powerful being with extraordinary abilities.</p>
+<p>Your mission is to colonize all the countries and build your empire using your superpowers.</p>
+<p>Net Worth: $100,000,000,000</p>
+<p>Age: 20</p>
+<p>Height: 6’4</p>
+<p>Superpowers: Mind reading, mind control, memory erasure, future telling</p>
+<p>Instructions:</p>
+<ol>
+    <li>Select a country from the list below.</li>
+    <li>Use your superpowers wisely to conquer the selected country.</li>
+    <li>Expand your empire by conquering more countries.</li>
+</ol>
+<h2>Countries</h2>
+<select id="countries">
+    <option value="USA">USA</option>
+    <option value="China">China</option>
+    <option value="Russia">Russia</option>
+    <option value="India">India</option>
+    <option value="Brazil">Brazil</option>
+    <!-- Add more countries as needed -->
+</select>
+<button onclick="conquerCountry()">Conquer</button>
+<div id="message"></div>
+
+<script>
+    function conquerCountry() {
+        const country = document.getElementById("countries").value;
+        const success = Math.random() < 0.5; // 50% chance of success
+
+        if (success) {
+            document.getElementById("message").innerText = `Congratulations! You have successfully conquered ${country}.`;
+        } else {
+            document.getElementById("message").innerText = `Oops! Your attempt to conquer ${country} failed. Try again!`;
+        }
+    }
+</script>
+</body>
+</html>
